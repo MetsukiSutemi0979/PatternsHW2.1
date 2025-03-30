@@ -18,6 +18,8 @@ jobs:
         run: chmod +x gradlew
       - name: Start SUT
         run: java -jar ./artifacts/app-inank.jar &
+        env:
+          SERVER_PORT: 9999 
       - name: Install Chrome
         run: |
           sudo apt-get update
